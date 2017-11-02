@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="indexProduct.master.cs" Inherits="Tarea2Bases.crud.indexProduct" %>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Electrónica y Telecomunicaciones D & K</title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link href="../../css/css.css" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="../../Images/ico.jpg">
+	</head>
+	<body>
+        <div class="container">
+            <nav class="navbar navbar-inverse">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand">D & K</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nómina <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../paysheet/GeneratePaysheet.aspx">Generar nómina</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Producto <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./InsertProduct.aspx">Insertar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./DeleteProduct.aspx">Eliminar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./UpdateProduct.aspx">Actualizar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="./outOfStock.aspx">Fuera de stock</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Service <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../service/InsertService.aspx">Insertar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../service/DeleteService.aspx">Eliminar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../service/UpdateService.aspx">Actualizar</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Venta <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../sale/InsertSale.aspx">Generar venta</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Empleado <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../employee/InsertEmployee.aspx">Insertar empleado</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../employee/DeleteEmployee.aspx">Eliminar empleado</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../employee/UpdateEmployee.aspx">Update empleado</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cliente <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../client/InsertClient.aspx">Insertar Cliente</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../client/DeleteClient.aspx">Eliminar Cliente</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../client/UpdateClient.aspx">Update Cliente</a></li>
+                             </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Informe de inventario <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../crud/inventary/GenerateReportSell.aspx">Generar informe</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="../crud/inventary/ShowReportSell.aspx">Mostrar informe</a></li>
+                             </ul>
+                        </li>
+
+                        <li>
+                            <a href="../report/IntermediaryReport.aspx"><i class="fa fa-files-o fa-fw"></i> Report</a>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <div class="navbar-header">
+                            <a href="./index.aspx" class="navbar-brand navbar-right">Cerrar sesión</a>
+                        </div>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+
+                                        <!-- NÓMINA -->
+            <!-- Se llama el formulario de la nómina-->
+            <asp:ContentPlaceHolder ID="ContentPaysheet" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- PRODUCTOS -->
+             <!-- Se llama el formulario de insertar producto-->
+            <asp:ContentPlaceHolder ID="ContentInsertProduct" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentOutStockProduct" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- Se llama el formulario de eliminar producto-->
+            <asp:ContentPlaceHolder ID="ContentDeleteProduct" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- Se llama el formulario de eliminar producto-->
+            <asp:ContentPlaceHolder ID="ContentUpdateProduct" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- SERVICIOS -->
+             <!-- Se llama el formulario de insertar servicio-->
+            <asp:ContentPlaceHolder ID="ContentInsertService" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- CLIENT -->
+            <!-- Se llama el formulario de insertar venta-->
+            <asp:ContentPlaceHolder ID="ContentInsertClient" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- EMPLEADO -->
+            <!-- Se llama el formulario de insertar el empleado-->
+            <asp:ContentPlaceHolder ID="ContentInsertEmployee" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- Se llama el formulario de eliminar el empleado-->
+            <asp:ContentPlaceHolder ID="ContentDeleteEmployee" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- VENTA -->
+            <!-- Se llama el formulario de insertar venta-->
+            <asp:ContentPlaceHolder ID="ContentInsertSale" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- CONTENIDO DE PRODUCTO -->
+            <!-- Se llama el formulario de insertar contenido de producto-->
+            <asp:ContentPlaceHolder ID="InsertContentProduct" runat="server"></asp:ContentPlaceHolder>
+
+                                        <!-- CONTENIDO DE SERVICIO -->
+            <!-- Se llama el formulario de insertar contenido de servicio-->
+            <asp:ContentPlaceHolder ID="InsertContentService" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="DeleteContentService" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- Se llama el formulario de actualiza la factura-->
+            <asp:ContentPlaceHolder ID="ContentUpdateInvoice" runat="server"></asp:ContentPlaceHolder>
+
+            <!-- Se llama el formulario del reporte-->
+            <asp:ContentPlaceHolder ID="ContentReport" runat="server"></asp:ContentPlaceHolder>
+
+        </div><!-- /.container-fluid -->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+</html>

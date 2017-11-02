@@ -1,0 +1,30 @@
+C:\Users\Danny\documents\visual studio 2015\Projects\Tarea2Bases\Domain\bin\Debug\Domain.dll
+C:\Users\Danny\documents\visual studio 2015\Projects\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+C:\Users\Danny\documents\visual studio 2015\Projects\Tarea2Bases\Domain\obj\Debug\Domain.dll
+C:\Users\Danny\documents\visual studio 2015\Projects\Tarea2Bases\Domain\obj\Debug\Domain.pdb
+C:\Users\Danny\documents\visual studio 2015\Projects\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\CrDan\Desktop\Tarea2Bases\Domain\bin\Debug\Domain.dll
+C:\Users\CrDan\Desktop\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+C:\Users\CrDan\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.dll
+C:\Users\CrDan\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.pdb
+C:\Users\CrDan\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\CrDan\Desktop\2017\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.dll
+C:\Users\CrDan\Desktop\2017\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+C:\Users\CrDan\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\CrDan\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.dll
+C:\Users\CrDan\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.pdb
+F:\2017\Desktop\2017\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.dll
+F:\2017\Desktop\2017\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+F:\2017\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+F:\2017\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.dll
+F:\2017\Desktop\2017\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.pdb
+E:\Information\UCR\Courses\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.dll
+E:\Information\UCR\Courses\Bases II\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+E:\Information\UCR\Courses\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+E:\Information\UCR\Courses\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.dll
+E:\Information\UCR\Courses\Bases II\Tarea2Bases\Domain\obj\Debug\Domain.pdb
+C:\Users\Daniel\Desktop\Tarea2Bases\Domain\bin\Debug\Domain.dll
+C:\Users\Daniel\Desktop\Tarea2Bases\Domain\bin\Debug\Domain.pdb
+C:\Users\Daniel\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.dll
+C:\Users\Daniel\Desktop\Tarea2Bases\Domain\obj\Debug\Domain.pdb

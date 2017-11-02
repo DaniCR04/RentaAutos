@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B66B549E-B2B4-4314-8286-18CAB94636DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tarea2Bases</RootNamespace>
+    <AssemblyName>Tarea2Bases</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="crud\client\deleteClient.aspx" />
+    <Content Include="crud\client\insertClient.aspx" />
+    <Content Include="crud\client\updateClient.aspx" />
+    <Content Include="crud\employee\deleteEmployee.aspx" />
+    <Content Include="crud\employee\insertEmployee.aspx" />
+    <Content Include="crud\employee\updateEmployee.aspx" />
+    <Content Include="crud\inventary\GenerateReport.aspx" />
+    <Content Include="crud\inventary\ShowReport.aspx" />
+    <Content Include="crud\paysheet\GeneratePaysheet.aspx" />
+    <Content Include="crud\product\deleteProduct.aspx" />
+    <Content Include="crud\product\insertProduct.aspx" />
+    <Content Include="crud\product\outOfStock.aspx" />
+    <Content Include="crud\product\updateProduct.aspx" />
+    <Content Include="crud\report\intermediaryReport.aspx" />
+    <Content Include="crud\sale\insertSale.aspx" />
+    <Content Include="crud\sale\insertSaleLimited.aspx" />
+    <Content Include="crud\service\deleteService.aspx" />
+    <Content Include="crud\service\insertService.aspx" />
+    <Content Include="crud\service\updateService.aspx" />
+    <Content Include="crud\usuario\insertUsuario.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\css.css" />
+    <Content Include="error.aspx" />
+    <Content Include="example.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\ico.jpg" />
+    <Content Include="Images\moder-g.jpg" />
+    <Content Include="Images\report3.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="IndexEmployee.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="limitedUser.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IndexMaster.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="crud\indexService.Master" />
+    <Content Include="crud\indexSale.Master" />
+    <Content Include="crud\indexReport.Master" />
+    <Content Include="crud\indexProduct.Master" />
+    <Content Include="crud\indexPaysheet.Master" />
+    <Content Include="crud\indexEmployee.Master" />
+    <Content Include="crud\indexClient.Master" />
+    <Content Include="crud\ReportSell.Master" />
+    <Content Include="crud\indexUsuario.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Reports\Report.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="crud\client\deleteClient.aspx.cs">
+      <DependentUpon>deleteClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\client\deleteClient.aspx.designer.cs">
+      <DependentUpon>deleteClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\client\insertClient.aspx.cs">
+      <DependentUpon>insertClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\client\insertClient.aspx.designer.cs">
+      <DependentUpon>insertClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\client\updateClient.aspx.cs">
+      <DependentUpon>updateClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\client\updateClient.aspx.designer.cs">
+      <DependentUpon>updateClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\employee\deleteEmployee.aspx.cs">
+      <DependentUpon>deleteEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\employee\deleteEmployee.aspx.designer.cs">
+      <DependentUpon>deleteEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\employee\insertEmployee.aspx.cs">
+      <DependentUpon>insertEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\employee\insertEmployee.aspx.designer.cs">
+      <DependentUpon>insertEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\employee\updateEmployee.aspx.cs">
+      <DependentUpon>updateEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\employee\updateEmployee.aspx.designer.cs">
+      <DependentUpon>updateEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexClient.Master.cs">
+      <DependentUpon>indexClient.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexClient.Master.designer.cs">
+      <DependentUpon>indexClient.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexEmployee.Master.cs">
+      <DependentUpon>indexEmployee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexEmployee.Master.designer.cs">
+      <DependentUpon>indexEmployee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexProduct.Master.cs">
+      <DependentUpon>indexProduct.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexProduct.Master.designer.cs">
+      <DependentUpon>indexProduct.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexSale.Master.cs">
+      <DependentUpon>indexSale.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexSale.Master.designer.cs">
+      <DependentUpon>indexSale.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexPaysheet.Master.cs">
+      <DependentUpon>indexPaysheet.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexPaysheet.Master.designer.cs">
+      <DependentUpon>indexPaysheet.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexUsuario.Master.cs">
+      <DependentUpon>indexUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexUsuario.Master.designer.cs">
+      <DependentUpon>indexUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\inventary\GenerateReport.aspx.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\inventary\GenerateReport.aspx.designer.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\inventary\ShowReport.aspx.cs">
+      <DependentUpon>ShowReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\inventary\ShowReport.aspx.designer.cs">
+      <DependentUpon>ShowReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\paysheet\GeneratePaysheet.aspx.cs">
+      <DependentUpon>GeneratePaysheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\paysheet\GeneratePaysheet.aspx.designer.cs">
+      <DependentUpon>GeneratePaysheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\product\deleteProduct.aspx.cs">
+      <DependentUpon>deleteProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\product\deleteProduct.aspx.designer.cs">
+      <DependentUpon>deleteProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\product\insertProduct.aspx.cs">
+      <DependentUpon>insertProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\product\insertProduct.aspx.designer.cs">
+      <DependentUpon>insertProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\product\outOfStock.aspx.cs">
+      <DependentUpon>outOfStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\product\outOfStock.aspx.designer.cs">
+      <DependentUpon>outOfStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\product\updateProduct.aspx.cs">
+      <DependentUpon>updateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\product\updateProduct.aspx.designer.cs">
+      <DependentUpon>updateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexReport.Master.cs">
+      <DependentUpon>indexReport.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexReport.Master.designer.cs">
+      <DependentUpon>indexReport.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\ReportSell.Master.cs">
+      <DependentUpon>ReportSell.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\ReportSell.Master.designer.cs">
+      <DependentUpon>ReportSell.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\report\intermediaryReport.aspx.cs">
+      <DependentUpon>intermediaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\report\intermediaryReport.aspx.designer.cs">
+      <DependentUpon>intermediaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\sale\insertSale.aspx.cs">
+      <DependentUpon>insertSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\sale\insertSale.aspx.designer.cs">
+      <DependentUpon>insertSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\sale\insertSaleLimited.aspx.cs">
+      <DependentUpon>insertSaleLimited.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\sale\insertSaleLimited.aspx.designer.cs">
+      <DependentUpon>insertSaleLimited.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\service\deleteService.aspx.cs">
+      <DependentUpon>deleteService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\service\deleteService.aspx.designer.cs">
+      <DependentUpon>deleteService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\indexService.Master.cs">
+      <DependentUpon>indexService.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\indexService.Master.designer.cs">
+      <DependentUpon>indexService.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crud\service\insertService.aspx.cs">
+      <DependentUpon>insertService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\service\insertService.aspx.designer.cs">
+      <DependentUpon>insertService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\service\updateService.aspx.cs">
+      <DependentUpon>updateService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\service\updateService.aspx.designer.cs">
+      <DependentUpon>updateService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crud\usuario\insertUsuario.aspx.cs">
+      <DependentUpon>insertUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crud\usuario\insertUsuario.aspx.designer.cs">
+      <DependentUpon>insertUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="example.aspx.cs">
+      <DependentUpon>example.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="example.aspx.designer.cs">
+      <DependentUpon>example.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexEmployee.aspx.cs">
+      <DependentUpon>IndexEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexEmployee.aspx.designer.cs">
+      <DependentUpon>IndexEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexMaster.Master.cs">
+      <DependentUpon>IndexMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexMaster.Master.designer.cs">
+      <DependentUpon>IndexMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="limitedUser.aspx.cs">
+      <DependentUpon>limitedUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="limitedUser.aspx.designer.cs">
+      <DependentUpon>limitedUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{05D7548C-ADEA-4172-8E10-FCC5AF922B0D}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{67D3009A-E487-4A86-91F5-34FD5E4FD8B6}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63103</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63103/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
